@@ -1,0 +1,34 @@
+const NFTs = []
+
+function mintNFT(_name, _eyecolor, _shirt,_bling) {
+  const NFT = {
+    "name" : _name,
+    "eyecolor" : _eyecolor,
+    "shirt" : _shirt,
+    "bling" : _bling
+  }
+NFTs.push(NFT);
+console.log("Minted: " + _name);
+
+}
+
+function listNFTs() {
+  for(let i=0; i < NFTs.length; i++){
+    console.log("ID: \t\t " + (i +  1) )
+    console.log("Name: \t\t " + NFTs[i].name);
+    console.log("Eye Color: \t " + NFTs[i].eyecolor);
+    console.log("Shirt: \t\t " + NFTs[i].shirt);
+    console.log("Bling: \t\t " + NFTs[i].bling);
+  }
+}
+
+function getTotalSupply(){
+  console.log(NFTs.length);
+}
+
+mintNFT("Marcus","Brown","Uniqlo","Gold Chain\n",);
+mintNFT("Louis","Brown","Uniqlo","Gold Chain\n",);
+mintNFT("Justine","Brown","Uniqlo","Gold Chain\n",);
+mintNFT("Neisha","Brown","Uniqlo","Gold Chain",);
+listNFTs();
+getTotalSupply();
